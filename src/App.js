@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getImages();
-  }, []);
+  });
 
   const Show = (imageSrc) => {
     let currIdx = images.indexOf(imageSrc);
@@ -104,7 +104,7 @@ function App() {
               onClick={moveLeft}
             />
 
-            <img style={dialogImg} src={showImageSrc}></img>
+            <img style={dialogImg} src={showImageSrc} alt=""></img>
 
             <FaArrowAltCircleRight
               style={navStyle}

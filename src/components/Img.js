@@ -6,7 +6,12 @@ const Img = ({ address, source, onShow }) => {
 
   return (
     <div style={container}>
-      <img style={imgStyle} src={address} onClick={() => onShow(source)} />
+      <img
+        style={imgStyle}
+        src={address}
+        onClick={() => onShow(source)}
+        alt=""
+      />
     </div>
   );
 };
