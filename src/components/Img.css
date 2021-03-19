@@ -1,0 +1,4 @@
+div #container {
+  transition-duration: 1s ease;
+  margin: 10;
+}
