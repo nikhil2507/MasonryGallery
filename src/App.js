@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getImages();
-  });
+  }, []);
 
   const Show = (imageSrc) => {
     let currIdx = images.indexOf(imageSrc);
