@@ -58,13 +58,10 @@ function App() {
   const getImages = async (count = 20) => {
     const accessKey = "vizdGwARHPsLnixTFMGfRf-oJU3coN4Ah02I6vXDiyg";
 
-    axios
-      .get(
-        `https://api.unsplash.com/photos/?client_id=${accessKey}&count=${count}`
-      )
-      .then((response) => {
-        setImages([...images, ...response.data]);
-      });
+    const response = await axios.get(
+      `https://api.unsplash.com/photos/?client_id=${accessKey}&count=${count}`
+    );
+    setImages([...images, ...response.data]);
   };
 
   return (
